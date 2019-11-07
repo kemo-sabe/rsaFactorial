@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="description">
+		<meta name="keywords" content="keywords">
+		<meta name="author" content="Will Campbell">
+		<title>RSA</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1 class="subTitle">RSA</h1>
+		<!--*******************	MESSAGE TO CIPHER	*******************-->
+		<h2 id="cipherOut"></h2>
+		<h4>Message to Cipher</h4>
+		<form>
+			<input type="number" id="message" placeholder="m">							<!-- 65 -->
+			<input type="number" id="exponent" placeholder="e">							<!-- 17 -->
+			<input type="number" id="modulus" placeholder="n">							<!-- 3233 -->
+			<button class="rsaBtn" onClick="goCiph()">Go!</button>
+		</form>
+		<hr>
+		
+		<!--*******************	CIPHER TO MESSAGE	*******************-->
+		<h2 class="subTitle">Message</h2>
+		<h3 id="messageOut"></h3>
+		<h4>Cipher to Message</h4>
+		<form>
+			<input type="number" id="cipher" placeholder="c">								<!-- 2790 -->
+			<input type="number" id="private" placeholder="d">							<!-- 413 -->
+			<input type="number" id="modulus2" placeholder="n">							<!-- 3233 -->
+			<button class="rsaBtn" onClick="goMsg()">Go!</button>
+		</form>
+		<hr>
+		
+		<!--*******************	FIND N	*******************-->
+		<h2 class="subTitle">Find N (or Mod) and Totient (or Phi)</h2>
+		<h3 id="totient"></h3>
+		<h3 id="modulus3"></h3>
+		<form>
+			<input type="number" id="prime1" placeholder="p">								<!-- 61 -->
+			<input type="number" id="prime2" placeholder="q">								<!-- 53 -->
+			<button class="rsaBtn" onClick="goTot()">Go!</button>
+		</form>
+		<hr>
+		
+		<!--*******************	FIND PRIME	*******************-->
+		<h2 class="subTitle">Prime 1</h2>
+		<h3 id="primeOne"></h3>
+		<form>
+			<input type="number" id="primeTwo" placeholder="q">							<!-- 53 -->
+			<input type="number" id="modulus4" placeholder="n">							<!-- 3233 -->
+			<button class="rsaBtn" onClick="goP1()">Go!</button>
+		</form>
+		<hr>
+		
+		<!--*******************	FIND PRIME	*******************-->
+		<h2 class="subTitle">Prime 2</h2>
+		<h3 id="primeSecond"></h3>
+		<form>
+			<input type="number" id="primeFirst" placeholder="p">						<!-- 61 -->
+			<input type="number" id="modulus5" placeholder="n">							<!-- 3233 -->
+			<button class="rsaBtn" onClick="goP2()">Go!</button>
+		</form>
+		<hr>
+		
+		<!--*******************	FIND PHI	*******************-->
+		<h2 class="subTitle">Phi</h2>
+		<h3>List of possible phi's</h3>
+<!--		<ul id="phiOut"></ul>-->
+		<h35 id="phiOut"></h35>
+		<form>
+			<input type="number" id="phiIn" placeholder="phi">							<!-- 780 -->
+			<button class="rsaBtn" onClick="goPhi()">Go!</button>
+		</form>
+		<hr>
+		
+		<!--*******************	JAVASCRIPT	*******************-->
+		<script src="script.js"></script>
+	</body>
+</html>
